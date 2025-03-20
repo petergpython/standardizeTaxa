@@ -1,4 +1,4 @@
-# standardizetaxa - check a list against a source of taxa and return the accepted taxa
+# standardizetaxa - check a list of plant taxa against a source with a taxonomic backbone and return the accepted taxa
 
 # How to use it
 Run function standardize:  standardize(input_pandas_dataframe, threshold = 0.8)
