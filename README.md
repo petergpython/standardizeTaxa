@@ -1,11 +1,15 @@
 # standardizetaxa - check a list of plant taxa against a source with a taxonomic backbone and return the accepted taxa
+Python package to check a list of plant taxa against a source with a taxonomic backbone and return the accepted taxa
+
+
 
 # How to use it
-Run function standardize:  standardize(input_pandas_dataframe, threshold = 0.8)
+Run function _standardize_:  standardize(input_pandas_dataframe, threshold = 0.8)
 
-Input_pandas_dataframe should have a column named full_taxa_input with the taxa to be standardized 
+Input_pandas_dataframe is a Pandas Dataframe object and should have a column named full_taxa_input with the taxa to be standardized (i.e. 1 taxon on each row).
+The threshold value must be between 0 and 1. A taxon is considered a match when its score is equal to or higher than the threshold.  
 
-Return a dictionary with Keys 'dataframe'  and 'taxa_reconciliation_table'. The dataframe include an additional column taxa_standardized
+The function _standardize_ returns a dictionary with Keys 'dataframe'  and 'taxa_reconciliation_table'. The dataframe includes an additional column taxa_standardized, which is the accepted name of the taxon matched (i.e. the output_name in the taxa_reconciliation_table).
 
 The taxa_reconciliation_table shows:
   -input name: is the name that was fed to the https://verifier.globalnames.org API 
