@@ -62,6 +62,7 @@ def standardize(input_df, threshold = 0.8, sources = ['196']):
     arguments: 1) a dataframe with a column with taxa name to be standardized called "full_taxa_input"
     2)threshold argument from 0.1 to 0.99 is optional 
     3)sources , a list with the code of the database(s) to be used for ex '196' for World Flora Online 
+    this function returns a dictionary with Keys 'dataframe'  and 'taxa_reconciliation_table'
     """
     results = dict()
     result_queries = run_batch_queries(input_df, threshold)
